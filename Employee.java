@@ -20,7 +20,7 @@ public class Employee {
 
     public void setHourlyRate(int hourlyRate) {
         if (hourlyRate <=0)
-            throw new IllegalArgumentException("HourlyRate rate camnot be 0 or -ve");
+            throw new IllegalArgumentException("HourlyRate cannot be 0 or -ve");
         this.hourlyRate = hourlyRate;
     }
 }
