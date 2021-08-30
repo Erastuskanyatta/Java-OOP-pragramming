@@ -1,7 +1,11 @@
 public class Employee {
-    private int baseSalary;
-    private int hourlyRate;
-    public Employee(int baseSalary, int hourlyRate ){
+    public int baseSalary;
+    public int hourlyRate;
+//    public  Employee(int baseSalary, int hourlyRate ){
+//        setBaseSalary(baseSalary);
+//        setHourlyRate(hourlyRate);
+//    }
+    public Employee(int baseSalary, int hourlyRate){
         setBaseSalary(baseSalary);
         setHourlyRate(hourlyRate);
     }
@@ -10,21 +14,28 @@ public class Employee {
         return baseSalary + (getHourlyRate() * extraHours);
     }
 
+    public int calculateWage() {
+        return calculateWage(0);
+    }
+
     private void setBaseSalary(int baseSalary) {
         if (baseSalary <= 0)
             throw new IllegalArgumentException("Sorry! Salary cannot be 0 or less");
+        this.baseSalary = baseSalary;
     }
-    private  int getBaseSalary() {
+
+    public int getBaseSalary() {  // to reduve coupling, change modifier to private
         return baseSalary;
     }
 
-    public int getHourlyRate() {
+    public int getHourlyRate() {  // to reduve coupling, change modifier to private
         return hourlyRate;
     }
 
     private void setHourlyRate(int hourlyRate) {
-        if (hourlyRate <=0)
-            throw new IllegalArgumentException("HourlyRate cannot be 0 or -ve");
+        if(hourlyRate <=0)
+            throw new IllegalArgumentException("hourlyRate cannot be 0 or less than 0");
         this.hourlyRate = hourlyRate;
     }
 }
+
