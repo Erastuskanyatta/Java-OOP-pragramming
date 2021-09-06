@@ -1,5 +1,6 @@
 public class main {
     public static void main(String[] args) {
+//        new Employee(20_000);
         var employee = new Employee(50_000,
                 20); //passing argument from the constructor
 //        employee = new Employee(50_000, 20);
@@ -9,6 +10,8 @@ public class main {
 
 //        employee.hourlyRate= -1;
 //        System.out.println(employee.baseSalary);
+//        System.out.println(Employee.numberOfEmployee);
+        Employee.printNumberOfEmployees();
         int wage = employee.calculateWage(0);
         System.out.println(wage);
 
