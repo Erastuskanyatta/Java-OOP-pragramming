@@ -16,8 +16,12 @@ class child extends parent {
 }
 
 public class upanddowncasting {
-    public static void main(String[] args) {  //Upcasting  only reference methods in child class which are directly in parent class
-        parent obj1 = new child(); // referencing child class
-        obj1.show(); //calling method show of the child class hence expecting to print "System.out.println("Child")"
+    public static void main(String[] args) {  //Downcasting
+        parent obj1 = new child();
+        if (obj1 instanceof child){
+            child obj2 = (child)obj1; // creating object2 using object 1
+            obj2 .showChild();
+        }
+
     }
 }
