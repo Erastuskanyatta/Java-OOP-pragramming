@@ -1,12 +1,11 @@
 public class TaxCalculator2018 implements TaxCalculator{
-    private double TaxableIncome;
+    private double taxableIncome;
 
-    public TaxCalculator2018(double TaxableIncome){
-        this.TaxableIncome = new TaxCalculator2018(20-000);
+    public TaxCalculator2018(double taxableIncome){
+        this.taxableIncome = taxableIncome;
     }
 
-    public void double calculateTax(){
-        return TaxableIncome * 0.5;
+    public double calculateTax(){
+        return taxableIncome * 0.5;
     }
-
 }
